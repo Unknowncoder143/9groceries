@@ -1,1 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sonamasoori Rice - MMR 5KG</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      display: flex;
+      gap: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .product-img img {
+      width: 400px;
+      border-radius: 8px;
+    }
+    .product-details {
+      flex: 1;
+    }
+    .product-details h1 {
+      font-size: 28px;
+    }
+    .price {
+      color: green;
+      font-size: 24px;
+      margin: 10px 0;
+    }
+    .desc {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+    .stock {
+      color: #007600;
+      font-weight: bold;
+    }
+    .button {
+      background: #ff9900;
+      border: none;
+      padding: 10px 20px;
+      margin-right: 10px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .button:hover {
+      background: #e08900;
+    }
+  </style>
+</head>
+<body>
 
+  <div class="container">
+    <div class="product-img">
+      <img src="https://m.media-amazon.com/images/I/71j4Uq12gLL._SX679_.jpg" alt="Sonamasoori Rice">
+    </div>
+
+    <div class="product-details">
+      <h1>MMR Sona Masoori Raw Rice 5KG</h1>
+      <div class="price">₹700.00</div>
+      <div class="stock">In stock</div>
+      <p class="desc">
+        Premium raw rice perfect for daily meals. Lightweight, aromatic and easy to digest—ideal for pulavs, biryani, and steamed rice 🍚✨.
+      </p>
+
+      <form action="/order" method="POST">
+        <input type="hidden" name="productId" value="MMRSONA5KG">
+        <input type="hidden" name="productName" value="Sona Masoori Rice">
+        <input type="hidden" name="price" value="700">
+        <input type="hidden" name="userIP" id="userIP" value="">
+        <input type="hidden" name="userLocation" id="userLocation" value="">
+
+        <input type="text" name="customerName" placeholder="Your Name" required><br><br>
+        <input type="text" name="address" placeholder="Delivery Address" required><br><br>
+        <input type="email" name="email" placeholder="Email" required><br><br>
+
+        <button type="submit" class="button">Buy Now</button>
+        <button type="button" class="button">Add to Cart</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Get IP and Location via public API
+    fetch('https://ipapi.co/json/')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('userIP').value = data.ip;
+        document.getElementById('userLocation').value = `${data.city}, ${data.region}, ${data.country_name}`;
+      })
+      .catch(() => {
+        document.getElementById('userLocation').value = 'Unknown';
+      });
+  </script>
+
+</body>
+</html>
