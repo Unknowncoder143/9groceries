@@ -856,8 +856,21 @@
   }
 
   .mobile-menu {
-    display: block;
-  }
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 70px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  z-index: 1001;
+  flex-direction: column;
+  gap: 1rem;
+}
+.mobile-menu.show {
+  display: flex;
+}
 }
 
     </style>
