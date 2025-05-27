@@ -1019,13 +1019,22 @@
             }
         }
 
-        .gcse-search {
-  display: block !important;
-  visibility: visible !important;
-  z-index: 9999;
-  margin: 20px auto;
-}
+            @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
+      nav {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .search-bar {
+        order: 5;
+        width: 100%;
+      }
+    }
     </style>
 </head>
 <body>
