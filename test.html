@@ -860,36 +860,35 @@
     <div class="background-pattern"></div>
     <div class="scroll-indicator" id="scrollIndicator"></div>
     
-    <header id="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">9groceries</div>
-                <nav>
-                    <a href="#home" class="nav-link">Home</a>
-                    <a href="#products" class="nav-link">Shop</a>
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="#services" class="nav-link">Services</a>
-                    <a href="#contact" class="nav-link">Contact</a>
-                    <a href="#deals" class="nav-link">Deals</a>
-                </nav>
-                </div>
-            <div class="mobile-menu">
-                <a href="#home">Home</a>
-                <a href="#products">Shop</a>
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#contact" >Contact</a>
-                <a href="#deals" >Deals</a>
-                 <button class="mobile-menu" onclick="toggleMenu()">☰</button>
-            </div>
-                <button class="cart-button" id="cartButton">
-                    🛒
-                    <span class="cart-count" id="cartCount">0</span>
-                </button>
-            
-        </div>
-        
-    </header>
+   <header id="header">
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">9groceries</div>
+      <nav class="desktop-nav">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#products" class="nav-link">Shop</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#deals" class="nav-link">Deals</a>
+      </nav>
+      <button class="cart-button" id="cartButton">
+        🛒 <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="mobile-menu-button" onclick="toggleMenu()">☰</button>
+    </div>
+
+    <nav class="mobile-nav" id="mobileNav" style="display:none;">
+      <a href="#home">Home</a>
+      <a href="#products">Shop</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+      <a href="#deals">Deals</a>
+    </nav>
+  </div>
+</header>
+
     
     <main>
         <section class="hero" id="home">
