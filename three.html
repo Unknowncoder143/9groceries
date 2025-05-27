@@ -63,7 +63,7 @@
             padding: 0 20px;
         }
         
-        header {
+ header {
             backdrop-filter: blur(20px);
             background: var(--glass);
             border-bottom: 1px solid var(--border);
@@ -74,10 +74,11 @@
         }
         
         .header-content {
-    flex-direction: row !important;
-    align-items: center;
-    justify-content: space-between;
-}
+            display: flex;
+            justify-content: between;
+            align-items: center;
+            padding: 1rem 0;
+        }
         @media (max-width: 768px) {
   .header-content {
     display: flex;
