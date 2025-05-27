@@ -1373,6 +1373,12 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-
+<script>
+window.addEventListener('DOMContentLoaded', function() {
+  if (window.innerWidth <= 768) {
+    document.getElementById('contactFormModal').classList.add('show-form');
+  }
+});
+</script>
 </body>
 </html>
