@@ -843,6 +843,26 @@
         .category-content h3 {
             margin-bottom: 10px;
         }
+
+            @media (max-width: 768px) {
+      .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: #444;
+        display: none;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
     </style>
 </head>
 <body>
